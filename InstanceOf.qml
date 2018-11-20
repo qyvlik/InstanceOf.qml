@@ -328,9 +328,10 @@ Item {
     function is(typestring, o) {
         try {
             thiz["__"+typestring] = o;
+            this["__"+typestring] = null;
             return true;
         } catch(e) {
-            console.log(e)
+            // console.error(e);
             return false;
         }
     }
